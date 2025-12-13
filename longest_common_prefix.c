@@ -8,7 +8,7 @@ char* longestCommonPrefix(char** strs, int strsSize)
     int j = 0;
     char *ret;
 
-    while (i < strsSize - 1)
+    while (strsSize > 1 && i < strsSize - 1)
     {
         j = 0;
         while (strs[i][j] && strs[i+1][j] && strs[i][j] == strs[i+1][j])
@@ -40,7 +40,7 @@ char* longestCommonPrefix(char** strs, int strsSize)
 
 int main()
 {
-    char *stringis[] = {"ower", "flow", "flight"};
-    char *s = longestCommonPrefix(stringis, 3);
+    char *stringis[] = {"ower"};
+    char *s = longestCommonPrefix(stringis, 1);
     printf("x%sx\n", s);
 }
