@@ -30,6 +30,8 @@ char* longestCommonPrefix(char** strs, int strsSize)
         }
         ret[i] = '\0';
     }
+    else if (strsSize == 1)
+        return (strs[0]);
     else 
     {
         ret = malloc(1);
@@ -40,7 +42,7 @@ char* longestCommonPrefix(char** strs, int strsSize)
 
 int main()
 {
-    char *stringis[] = {"ower"};
+    char *stringis[] = {"a"};
     char *s = longestCommonPrefix(stringis, 1);
     printf("x%sx\n", s);
 }
